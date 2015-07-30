@@ -52,6 +52,12 @@ clone git github.com/syndtr/gocapability 66ef2aa7a23ba682594e2b6f74cf40c0692b49f
 clone git github.com/golang/protobuf 655cdfa588ea
 clone git github.com/Graylog2/go-gelf 6c62a85f1d47a67f2a5144c0e745b325889a8120
 
+clone git github.com/mozilla-services/heka v0.10.0b0
+(cd vendor/src/github.com/mozilla-services/heka/message/ && \
+    go tool yacc -l=false -o=message_matcher_parser.go message_matcher_parser.y)
+# heka deps
+clone git github.com/gogo/protobuf 7d21ffbc76b992157ec7057b69a1529735fbab21
+
 clone git github.com/fluent/fluent-logger-golang v1.0.0
 # fluent-logger-golang deps
 clone git github.com/philhofer/fwd 899e4efba8eaa1fea74175308f3fae18ff3319fa
